@@ -4,16 +4,12 @@ import schedule
 import time
 import os
 
-# Helpful when testing locally
-from dotenv import load_dotenv
-load_dotenv()
-
-# Load your Twitter API keys (preferably from environment variables, config file, or within the railyway app)
-TWITTER_API_KEY = "NcfK6ZoVKCxgN5tMShw3BPGoU"
-TWITTER_API_SECRET = "r9HBznfn3DS2QY6WcJFcPfgZlT2dixGbDVVY4rYmhCOh4AqsKx"
-TWITTER_ACCESS_TOKEN = "1236314898059182080-R0K40bX1IjYz8pgpjPQOChaAL3qWZ2"
-TWITTER_ACCESS_TOKEN_SECRET = "ltsxAJ1y5VdQyh1NJJzmqWKNeBc4hmXDaXh5lf2FQRxOA"
-TWITTER_BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAABIcxgEAAAAAMo1y65j%2FfOPZhRGb5xJA9Jcnw28%3DQYjyy3AIrEsRK1tVnJtHhdS4P75HmPN5ZppzLXt6KpuqKW8D7t"
+# Load your Twitter API keys directly in the code (no need for dotenv)
+TWITTER_API_KEY = "KkwS4DUd7KJmsbw5zjyGPVVng"
+TWITTER_API_SECRET = "zYyWGHDntj6sSwIhoS9hb1xxAmqlxceYjjL8Zqo5GTHNUDaXI8"
+TWITTER_ACCESS_TOKEN = "1236314898059182080-Pr1eOuI6MV1SUsh1WBT7IB6On0yhN5"
+TWITTER_ACCESS_TOKEN_SECRET = "ylmERYrKELFjq9vIKhSQHmJxSln2M0rsbTiCrOxjS097n"
+TWITTER_BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAABIcxgEAAAAA%2BnljJHjFkmmWFscZBs17hrLWxpk%3D0EU5oKtaytQEfRitwBmbbbqU0NYfxZbvZRKmdk5gTmAVy7XOA8"
 
 # TwitterBot class to help us organize our code and manage shared state
 class TwitterBot:
@@ -106,7 +102,7 @@ def job():
 
 if __name__ == "__main__":
     # Schedule the job to run every 6 minutes
-    schedule.every(6).minutes.do(job)
+    schedule.every(1).minutes.do(job)
     while True:
         schedule.run_pending()
         time.sleep(1)
